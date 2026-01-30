@@ -108,30 +108,42 @@ p {
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: var(--white);
-  letter-spacing: -0.3px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
-.logo .logo-icon {
-  width: 32px;
-  height: 32px;
-  background: var(--gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: var(--navy);
-  font-weight: 700;
+.logo:hover {
+  color: var(--white);
 }
 
-.logo span {
-  color: var(--gold);
+.logo-shield {
+  width: 30px;
+  height: 36px;
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.85);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: var(--white);
+}
+
+.logo-sub {
+  font-size: 0.62rem;
+  letter-spacing: 3.5px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 3px;
+  font-weight: 400;
 }
 
 /* Main Nav */
