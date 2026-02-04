@@ -55,6 +55,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Contact Form
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      // Simulate send (replace with actual endpoint)
+      setTimeout(function () {
+        contactForm.style.display = 'none';
+        document.querySelector('.contact-wrapper h3').style.display = 'none';
+        document.querySelector('.contact-wrapper > p').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+      }, 800);
+    });
+  }
+
   // Active nav link based on current page
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.main-nav a').forEach(function (link) {
